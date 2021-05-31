@@ -9,9 +9,4 @@ public class ScannerUtils {
         return SCANNER.nextLine();
     }
 
-    public static int nextInt() {
-        int input = SCANNER.nextInt();
-        SCANNER.nextLine();
-        return input;
-    }
 }

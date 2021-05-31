@@ -51,7 +51,7 @@ public class HardIA implements IA{
                 for (int j = 0; j < 3; j++){
                     if (board.getCharacter(i,j) == ' '){
                         board.setCharacter(i,j,player);
-                        best = Math.max(best,minimax(board,depth+1,!isMax,player,opponent));
+                        best = Math.max(best,minimax(board,depth+1, false,player,opponent));
                         board.setCharacter(i,j,' ');
                     }
                 }
@@ -63,7 +63,7 @@ public class HardIA implements IA{
                 for (int j = 0; j < 3; j++){
                     if (board.getCharacter(i,j) == ' '){
                         board.setCharacter(i,j,opponent);
-                        best = Math.min(best,minimax(board,depth+1, !isMax,player,opponent));
+                        best = Math.min(best,minimax(board,depth+1, true,player,opponent));
                         board.setCharacter(i,j,' ');
                     }
                 }
